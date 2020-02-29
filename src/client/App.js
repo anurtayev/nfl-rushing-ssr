@@ -1,8 +1,25 @@
 import React, { useState } from "react";
-import { fieldNames } from "../model";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+
+export const fieldNames = {
+  player: "Player's name",
+  team: "Player's team abreviation",
+  pos: "Player's postion",
+  attg: "Rushing Attempts Per Game Average",
+  att: "Rushing Attempts",
+  yds: "Total Rushing Yards",
+  avg: "Rushing Average Yards Per Attempt",
+  ydsg: "Rushing Yards Per Game",
+  td: "Total Rushing Touchdowns",
+  lng: "Longest Rush",
+  first: "Rushing First Downs",
+  firstPercentage: "Rushing First Down Percentage",
+  twentyPlus: "Rushing 20+ Yards Each",
+  fortyPlus: "Rushing 40+ Yards Each",
+  fum: "Rushing Fumbles"
+};
 
 const ControlPanel = styled.div`
   padding: 1em;

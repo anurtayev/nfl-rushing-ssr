@@ -1,4 +1,4 @@
-import { getSortedDataSet, resolveData } from "./model";
+import { getSortedDataSet, filterData } from "./server/model";
 import URL from "url";
 
 const nameRegex = new RegExp("^[a-zA-Z.' ]*$");
@@ -20,7 +20,7 @@ export const getState = url => {
     sortBy
   });
 
-  const data = resolveData({
+  const data = filterData({
     data: getSortedDataSet(sanitizedSortBy),
     filter: sanitizedFilter
   });

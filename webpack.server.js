@@ -5,12 +5,12 @@ const baseConfig = require("./webpack.base.js");
 const config = {
   target: "node",
   mode: "production",
-  entry: "./src/index.js",
+  entry: "./src/server/index.js",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "build")
   },
-  devtool: "inline-source-map"
+  devtool: "eval-source-map"
 };
 
 module.exports = merge(baseConfig, config);
